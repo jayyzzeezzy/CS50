@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: I tested the running time of each code with all of the sorted text. I know that in the best case scenario, bubble sort gives the shortest running time. This is because it has a big omega of n. Therefore, by testing and comparing running time on all of the codes, I know that sort1 gives the fastest result. That's how I know sort1 uses bubble sort.
+
+sort2 uses: merge sort
+
+How do you know?: I know that in the worst case scenario, merge sort gives the shortest running time. I use this theory to test all the codes and run each code with random text and reversed text. It turns out that sort2 gives the shortest running time for both texts. Therefore, I know sort2 uses merge sort.
+
+sort3 uses: selection sort
+
+How do you know?: I know this by eliminating my choices from previous tests, which leaves sort3. I further test this by comparing sort3 in the best case scenario because selection sort gives the longest running time compared to other two sorting method. It turns out sort3 does take the longest to run and that's how I know sort3 uses selection sort. 
