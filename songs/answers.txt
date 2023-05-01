@@ -1,0 +1,10 @@
+Question 1: It will depend on what songs are in this listener's playlists. Generally songs in 2018 are about 5 years old if we are 2023 inclusive.
+I would definitely include a throwback label in their aura. For example, if this listener is a fan of the Astroworld album,
+then I would lable this listen's aura as euphoric or euphoric rap. The songs in Astroworld are largely high in energy and danceability levels
+so I would describe this listener's aura as high energy or euphoric.
+Ultimately, it will largely depend on what are the exact songs in listener's playlist.
+
+Question 2: One downside of this method is that the top 100 songs might not be enough data to represent the listener's aura entirely.
+For example, this person might listen to a lot of rap songs in one year but they are actually a fan of pop songs.
+If their top 20 songs are largely occupied by rap songs, then the calculation can be skewed towards rap more than pop.
+One suggestion to prevent situations like this would be to explore the median number rather than the average number.
