@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Maintenance
+{% endblock %}
+
+{% block main %}
+<h3>Maintenance</h3>
+<form action="/maintenance" method="post">
+    <!-- <div class="row mb-3"> -->
+    <div class="mb-3">
+        <label for="fname">First name: </label>
+        <input type="text" class="form-control mx-auto w-auto mb-3" name="fname" placeholder="First name" aria-label="First name">
+
+        <label for="lname">Last name: </label>
+        <input type="text" class="form-control mx-auto w-auto mb-3" name="lname" placeholder="Last name" aria-label="Last name">
+    </div>
+    <div class="mb-3">
+        <label for="email">Email: </label>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="email" name="email" placeholder="Email" type="email">
+    </div>
+    <div class="mb-3">
+        <label for="phone">Phone: </label>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="phone" name="phone" placeholder="Phone number" type="tel">
+    </div>
+    <div class="mb-3">
+        <label for="apt">Apartment#: </label>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="apt" name="apt" placeholder="Apt#" type="number" min="1" max="20">
+    </div>
+    <div class="mb-3">
+        <label for="description">Please provide a brief description of what is wrong:</label><br>
+        <textarea id="description" name="description" placeholder="Description" type="text"></textarea>
+    </div>
+    <div class="mb-3">
+        <lable for="permission">Permission to enter?</lable>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="permission" id="permission" value="yes">
+            <label class="form-check-label" for="/maintenance">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="permission" id="permission" value="no">
+            <label class="form-check-label" for="/maintenance">No</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <lable for="pet">Have pet(s)?</lable>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="pet" id="pet" value="yes">
+            <label class="form-check-label" for="/maintenance">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="pet" id="pet" value="no">
+            <label class="form-check-label" for="/maintenance">No</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="date">Please select a date:</label>
+        <input type="date" id="date" name="date">
+    </div>
+
+    <div class="mb-3">
+        <label for="time">Please select a time:</label>
+        <input type="time" id="time" name="time">
+    </div>
+    <div class="mb-3">
+        <label for="note">Special note (optional)</label><br>
+        <textarea id="note" name="note" placeholder="Special note" type="text"></textarea>
+    </div>
+    <div class="mb-3">
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+</form>
+{% endblock %}

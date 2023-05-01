@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Message
+{% endblock %}
+
+{% block main %}
+<h3>Message</h3>
+<form action="/message" method="post">
+    <div class="mb-3">
+        <label>Work Order ID:</label>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="workorderid" name="workorder_id" placeholder="Work Order#" type="text">
+    </div>
+    <div class="mb-3">
+        <label>Apartment:</label>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="apt" name="apt" placeholder="Apt#" type="number" min="1" max="20">
+    </div>
+    <div class="mb-3">
+        <label>From:</label>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="sender" placeholder="Username" type="text">
+    </div>
+    <div class="mb-3">
+        <label>To:</label>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="recipient" name="recipient" placeholder="Recipient" type="text">
+    </div>
+    <div class="mb-3">
+        <label>Subject:</label>
+        <input class="form-control mx-auto w-auto" id="subject" name="subject" placeholder="Subject" type="text">
+    </div>
+    <div class="mb-3">
+        <label>Body:</label>
+        <div>
+            <textarea name="body"></textarea>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Send</button>
+</form>
+{% endblock %}

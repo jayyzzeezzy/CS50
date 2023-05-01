@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    CS50 Work Order
+{% endblock %}
+
+{% block main %}
+<h3>Status</h3>
+<form action="/status" method="post">
+    <label for="status_id">Work Order ID: </label>
+    <div class="mb-3">
+        <select name="status_id">
+            {% for status_id in status_ids %}
+                <option value="{{ status_id }}">{{ status_id }}</option>
+            {% endfor %}
+        </select>
+        <!-- <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="status" name="status_id" placeholder="Work Order ID" type="text"> -->
+    </div>
+
+    <label for="update_status">Status: </label>
+    <select name="update_status" class="form-select mx-auto w-auto" aria-label="Default select example">
+        <option disabled selected>Select one below</option>
+        {% for status in statuses %}
+            <option value="{{ status }}">{{ status }}</option>
+        {% endfor %}
+            <!-- <option name="update_status" value="Pending">Pending</option>
+            <option name="update_status" value="Dispacted worker">Dispatched worker</option>
+            <option name="update_status" value="Completed">Completed</option> -->
+    </select>
+    <button class="btn btn-primary my-3" type="submit">Submit</button>
+</form>
+{% endblock %}

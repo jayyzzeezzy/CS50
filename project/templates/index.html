@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    CS50 Work Order
+{% endblock %}
+
+{% block main %}
+    <h3>Not complete:</h3>
+    <table class="table table-striped" name="notcomplete">
+        <thead>
+            <tr>
+                <th scope="col">Work Order ID</th>
+                <th scope="col">Apartment</th>
+                <th scope="col">Service Date</th>
+                <th scope="col">Service Time</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in database %}
+                <tr>
+                    <th scope="row">{{ row["id"] }}</th>
+                    <td>{{ row["apt"] }}</td>
+                    <td>{{ row["date"] }}</td>
+                    <td>{{ row["time"] }}</td>
+                    <td>{{ row["status"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h3>Completed:</h3>
+    <table class="table table-striped" name="completed">
+        <thead>
+            <tr>
+                <th scope="col">Work Order ID</th>
+                <th scope="col">Apartment</th>
+                <th scope="col">Service Date</th>
+                <th scope="col">Service Time</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in completes %}
+                <tr>
+                    <th scope="row">{{ row["id"] }}</th>
+                    <td>{{ row["apt"] }}</td>
+                    <td>{{ row["date"] }}</td>
+                    <td>{{ row["time"] }}</td>
+                    <td>{{ row["status"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

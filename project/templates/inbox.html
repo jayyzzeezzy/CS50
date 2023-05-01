@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Inbox
+{% endblock %}
+
+{% block main %}
+<h3>Inbox</h3>
+<div>
+    {% for message in messages %}
+    <div class="list-group-item">
+        <h6>Sender: {{ message.sender }}</h6>
+        <h2>{{ message.subject }}</h2>
+        <p>{{ message.timestamp }}</p>
+        <form action="/view" method="post">
+            <input type="hidden" name="message_id" value="{{ message.id }}">
+            <input type="submit" class="btn btn-primary" value="View Message">
+        </form>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
